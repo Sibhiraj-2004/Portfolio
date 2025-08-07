@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sibhiraj Hariharan | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f1111;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      font-size: 24px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+    section {
+      padding: 60px 10%;
+      animation: fadeIn 1s ease forwards;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+    }
+    .project, .edu-block, .skill {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-left: 5px solid #00bcd4;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project:hover, .edu-block:hover, .skill:hover {
+      transform: translateY(-5px);
+    }
+    .contact a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f1111;
+      color: #ccc;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #222;
+        display: none;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+      }
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Sibhiraj Hariharan</h1>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Sibhiraj Hariharan, an aspiring Software Engineer with a strong foundation in Computer Science. I am passionate about building scalable, impactful tech solutions and continuously learning new technologies to contribute meaningfully to an organization.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-block">
+      <strong>Thiagarajar College of Engineering</strong><br>
+      B.E. Computer Science, CGPA: 8.5<br>
+      Nov 2021 - May 2025
+    </div>
+    <div class="edu-block">
+      <strong>The TVS School</strong><br>
+      Class XII – 93.7%<br>
+      2020 - 2021
+    </div>
+    <div class="edu-block">
+      <strong>TVS Matriculation Higher Secondary School</strong><br>
+      Class X – 91.8%<br>
+      2019 - 2020
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <strong>Jewellery Invoice Generator</strong><br>
+      React JS, Bootstrap, JSON Server<br>
+      <ul>
+        <li>Stock management and auto billing based on gold/silver rates</li>
+        <li>Responsive frontend using React & Bootstrap</li>
+        <li><a href="https://github.com/sibhiraj-h/jwellery-invoice.git" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>Virtual Classroom Application</strong><br>
+      Java, SQL, Design Patterns<br>
+      <ul>
+        <li>Terminal-based manager with Singleton, Factory, Command, Observer patterns</li>
+        <li><a href="https://github.com/Sibhiraj-2004/Virtual_Classroom.git" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <strong>Parkinson’s Disease Detection</strong><br>
+      Python, Streamlit, ML Models<br>
+      <ul>
+        <li>Used Random Forest, SVM, Linear Regression, GAN</li>
+        <li>Explainable AI via LIME</li>
+        <li><a href="https://colab.research.google.com/drive/1ijd6Er_-_jaBwy7W4lJPF_03kw2HMyhK?usp=sharing" target="_blank">Colab Notebook</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill">
+      <strong>Languages:</strong> Java, C, Python
+    </div>
+    <div class="skill">
+      <strong>Frameworks:</strong> React JS, Bootstrap
+    </div>
+    <div class="skill">
+      <strong>Database:</strong> MySQL
+    </div>
+    <div class="skill">
+      <strong>Tools:</strong> Git, GitHub, VS Code, Google Colab
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sibhiraj2004@gmail.com">sibhiraj2004@gmail.com</a></p>
+    <p>Phone: <a href="tel:+917904724752">+91-7904724752</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sibhiraj-hariharan-1a6751366" target="_blank">linkedin.com/in/sibhiraj-hariharan</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Sibhiraj Hariharan. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    // Fade-in animation for sections on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.style.animation = 'fadeIn 1s ease forwards';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
